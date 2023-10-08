@@ -1,0 +1,84 @@
+body {
+  background-image: url("galaxy.jpg");
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  margin: 0px 0px 0px 0px;
+  behavior: "auto";
+}
+#header {
+  width: 100vw;
+  text-align: center;
+  height: 400px;
+  background-size: cover;
+  background-image: url("mars\ bg2.jpg");
+  display: grid;
+}
+h1 {
+  font-family: "Roboto Slab", Sans-serif;
+  font-size: 50px;
+  color: white;
+}
+#informacje {
+  padding: 30px;
+  float: left;
+  color: white;
+  width: 30vw;
+  max-height: 300px;
+}
+#atrakcje {
+  padding: 30px;
+  float: left;
+  color: white;
+  text-align: left;
+  width: 30vw;
+}
+#funfact {
+  padding: 30px;
+  float: left;
+  color: white;
+  text-align: left;
+  width: 30vw;
+}
+#wiedza {
+  width: 100vw;
+  min-width: 100vw;
+}
+#wycieczki {
+  color: white;
+  width: 100vw;
+  text-align: center;
+  height: 400px;
+}
+#w1 {
+  padding: 30px;
+  float: left;
+  color: white;
+  width: 30vw;
+  max-height: 300px;
+}
+#w2 {
+  padding: 30px;
+  float: left;
+  color: white;
+  width: 30vw;
+  max-height: 300px;
+}
+
+#w3 {
+  padding: 30px;
+  float: left;
+  color: white;
+  width: 30vw;
+  max-height: 300px;
+}
+#footer {
+  background-color: black;
+  width: 100vw;
+  height: 100px;
+  padding: 0px, 0px, 0px, 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0;
+}

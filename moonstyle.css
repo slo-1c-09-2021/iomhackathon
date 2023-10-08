@@ -1,0 +1,239 @@
+html {
+    background-image: url("galaxy.jpg");
+    overflow-x: hidden;
+    }
+  body {
+    width: 100vw;
+    background-image: url("galaxy.jpg");
+    background-repeat: no-repeat;
+    margin: 0px 0px 0px 0px;
+    behavior: "auto";
+    font-family: "Roboto Slab", Sans-serif;
+    text-shadow: 1px 1px black;
+  }
+  #header {
+    background-image: url("moon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    text-align: center;
+    height: 30vh;
+    background-color: black;
+    display: grid;
+    color: white;
+    font-size: 40px;
+    border-bottom: 3px solid white;
+  }
+  #headtext {
+    padding: 40px 0px;
+    text-shadow: 2px 2px black !important;
+    text-decoration: underline;
+    }
+  #main {
+    width: 100vw;
+    text-align: center;
+    height: auto;
+    display: grid;
+  }
+  h1 {
+    font-size: 50px;
+    color: #563570;
+  }
+  h2 {
+    text-decoration: underline;
+  }
+  #itineraries {
+    text-align: center;
+    font-size: 50px;
+    color: #563570;
+  }
+  #imdone {
+    height: 100px;
+    text-align: center;
+  }
+  .gensub {
+    margin-top: 30px;
+    padding: 20px;
+    float: left;
+    color: white;
+    width: 29vw;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-image: linear-gradient(#c29dc2, #baa0ba);
+    color: #563570;
+  }
+  #info {
+    margin-left: 10px;
+  }
+  #touristspots {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #general {
+    width: 100vw;
+    min-width: 100vw;
+    margin-bottom: 50px;
+  }
+  #trips {
+    color: #563570;
+    width: 100vw;
+    text-align: center;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  .trip {
+    padding: 20px;
+    float: left;
+    width: 29vw;
+    max-height: 300px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-image: linear-gradient(#c29dc2, #baa0ba);
+  }
+  #t1 {
+    margin-left: 10px;
+  }
+  #t2 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #footer {
+    background-color: rgb(6, 0, 5);
+    width: 100vw;
+    height: 100px;
+    padding: 0px, 0px, 0px, 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  #availability {
+    text-align: center;
+    font-size: 30px;
+    width: 40vw;
+    margin-left: 30vw;
+    padding-bottom: 10px;
+    color: #563570;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-image: linear-gradient(#c29dc2, #baa0ba);
+  }
+  #selform {
+    background-image: linear-gradient(#c29dc2, #baa0ba);
+  }
+  #sel {
+    border: 0 0 0 0;
+    padding: 0 0 0 0;
+    color: #563570;
+    font-size: 30px;
+    text-shadow: 1px 1px black;
+    border: 1px solid #563570;
+    background-image: linear-gradient(#c29dc2, #baa0ba);
+  } 
+#checkbutton {
+  color: #563570;
+  font-size: 30px;
+  text-shadow: 1px 1px black;
+  border: 1px solid #563570;
+  background-image: linear-gradient(#c29dc2, #baa0ba);
+}
+
+
+
+  /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

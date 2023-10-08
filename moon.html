@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Moon</title>
+    <link rel="stylesheet" href="moonstyle.css" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <script>
+        function check() {
+          let sel = parseInt(document.getElementById("sel").value);
+          let x = 2023.5;
+          let year= 2023;
+          let avail = false;
+          let decpart = 0.67;
+          let mon = 8;
+          while(x<sel+1) {
+            if(Math.floor(x)==sel) {
+              avail = true;
+              year= Math.floor(x);
+              decpart = x%1;
+              mon = Math.floor(decpart*12);
+              mon=mon+1;
+              document.getElementById("inject").innerHTML = "<p>" + year + "." + mon + "</p>";
+              break;
+            }
+            x=x+1;
+          }
+          if(avail==false) {
+            document.getElementById("inject").innerHTML = "<p>No available launch dates</p>";
+          }
+        }
+      </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <div class="dropdown">
+          <button class="dropbtn">Destinations
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="mercury.html">Mercury</a>
+            <a href="venus.html">Venus</a>
+            <a href="moon.html">Moon</a>
+            <a href="mars.html">Mars</a>
+            <a href="jupiter.html">Jupiter</a>
+            <a href="saturn.html">Saturn</a>
+            <a href="uranus.html">Uranus</a>
+            <a href="neptune.html">Neptune</a>
+          </div>
+        </div>
+    </div>
+    <div id="header"><p id="headtext">Moon</p></div>
+    <div id="main">
+        <div id="imdone"><h2 id="itineraries">Before you choose</h2></div>
+      <div id="general">
+        <div id="info" class="gensub">
+          <h2>Info</h2>
+          <p>
+            The Moon is the only natural satellite orbiting around the Earth. One rotation on its axis takes exactly as long as one full orbit of the Moon around the Earth which takes 27.32 days, which is why the Moon always faces Earth with the same side. Soviet Unions' spacecraft called Luna 1 was the first one to reach the Moon. Since then more than 140 missions have been performed. First ever spacewalk happened in 1969 in an expedition called Apollo 11, where Neil Armstrong became the first human to touch the moon's surface with his colleagues Michael Collins and Buzz Aldrin. Moon has 8 different lunar phases that describe which side of it is luminated by the sun. Moon is the main cause of waves in the Earth's oceans. The time it takes to reach the Moon with our rockets is around 1 hour.
+          </p>
+        </div>
+        <div id="touristspots" class="gensub">
+          <h2>Tourist spots</h2>
+          <p>
+            Moon was once a part of Earth which got split off by a comet the size of Mars so you’ll actually be standing on a fragment of the Earth. The largest confirmed crater on the Moon, and the second largest in the entire solar system, is the South Pole-Aitken basin or SPA. It is about 2500 kilometers in diameter. It would span the distance from New York City to Denver. Even though moon dust covers most of the surface because of lack of any winds and weather you can still find the footprints of Neil Armstrong and people who visited it. You can also find the remains of failed attempts of the Moon landing.
+          </p>
+        </div>
+        <div id="necessities" class="gensub">
+          <h2>Living conditions</h2>
+          The Moon's average temperature is -23°C. When sunlight hits Moon’s surface it can heat up to 123°C and when the sun goes down it cools down to -233°C. The Moon's gravity is equal to ⅙ the gravity of Earth so you’ll weight 6 times less. The outer layer known as an exosphere is very thin .It contains helium, argon, neon, ammonia, methane and carbon dioxide. Because of its thin atmosphere and low gravity the only weather hazards there are temperature swings. The Moon has a solid, rocky surface. Because of almost no atmosphere the moon lacks any natural defense against comets and asteroids which caused the amount of crates it has.
+
+        </div>
+      </div>
+    </div>
+    <div id="availability">
+        <p>Check space travel availability (yyyy.mm):</p>
+        <label id="selform" for="sel">Year of travel:</label>
+        <input type="number" id="sel" name="sel" min="1900" step="1" max="3900" value="2023">
+        <button id="checkbutton" onclick="check()">Check</button>
+        <div id="inject"></div>
+      </div>
+    <div id="imdone"><h2 id="itineraries">Itineraries</h2></div>
+    <div id="trips">
+      <div id="t1" class="trip"><p>The trip will be quick and fun.There may not be a lot of things to see, but the views are out of this world. Our itinerary includes visiting the site of the first space walk which contains the first footprints of humans on the Moon. There are also a lot of craters to explore but most importantly the second biggest crater in our solar system called South Pole-Aitken.</p></div>
+      <div id="t2" class="trip"><p>For the people enjoying sightseeing, we decided to prepare a trip just for you. We will take you around the many mountains, craters, valleys and maria.</p></div>
+      <div id="t3" class="trip"><p>If you enjoy learning about history, we have something just for you. You will see the site of the first landing on the moon, the iconic american flag and bases established by many different countries.</p></div>
+    </div>
+</body>
+</html>

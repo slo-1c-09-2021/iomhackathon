@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars</title>
+    <link rel="stylesheet" href="marsstyle.css" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <script>
+      function check() {
+        let sel = parseInt(document.getElementById("sel").value);
+        let x = 2023.6137;
+        let year= 2023;
+        let avail = false;
+        let decpart = 0.67;
+        let mon = 8;
+        while(x<sel+1) {
+          if(Math.floor(x)==sel) {
+            avail = true;
+            year= Math.floor(x);
+            decpart = x%1;
+            mon = Math.floor(decpart*12);
+            mon=mon+1;
+            document.getElementById("inject").innerHTML = "<p>" + year + "." + mon + "</p>";
+            break;
+          }
+          x=x+1.6027;
+        }
+        if(avail==false) {
+          document.getElementById("inject").innerHTML = "<p>No available launch dates</p>";
+        }
+      }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <div class="dropdown">
+          <button class="dropbtn">Destinations
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="mercury.html">Mercury</a>
+            <a href="venus.html">Venus</a>
+            <a href="moon.html">Moon</a>
+            <a href="mars.html">Mars</a>
+            <a href="jupiter.html">Jupiter</a>
+            <a href="saturn.html">Saturn</a>
+            <a href="uranus.html">Uranus</a>
+            <a href="neptune.html">Neptune</a>
+          </div>
+        </div>
+    </div>
+    <div id="header"><p id="headtext">Mars</p></div>
+    <div id="main">
+      <div id="imdone"><h2 id="itineraries">Before you choose</h2></div>
+      <div id="general">
+        <div id="info" class="gensub">
+          <h2>Info</h2>
+          <p>
+            Mars is a rocky planet that is about half the size of Earth. It is
+            the second most suitable planet in the Solar Sytem for the human
+            race to inhabit, right after Earth. The temperature may vary from
+            -140 to 30 degrees Celsius. A day on Mars (known as a sol) lasts
+            about 24 hours and 40 minutes in Earth time. The orbits of Earth and Mars create launch windows every 26 months. A one-way trip to the Red Planet takes about nine months. So if you want to make a
+            round-trip, all in all, it would take about 21 months as you will need 18 hours to to wait about three months on Mars to make sure it and Earth are in a suitable location to make the trip back home.
+            The time it takes to reach Mars with our rockets is around 4 and a half days.
+          </p>
+        </div>
+        <div id="touristspots" class="gensub">
+          <h2>Tourist spots</h2>
+          <p>
+            The tallest mountain in the entire solar system, Olympus Mons, is on
+            Mars. This extinct volcano is nearly 22 km tall - roughly two and a
+            half times the height of Mount Everest. Valles Marineris is a
+            massive canyon system that stretches over 3,000 km across Mars's
+            surface - about the distance between Montreal and Calgary! Plunging
+            about 8 km deep, and often referred to as "the Grand Canyon of
+            Mars," Valles Marineris makes the red planet home to the largest
+            known canyon in the solar system. Phobos-the innermost and larger of
+            the two natural satellites of Mars. Phobos is a small, irregularly
+            shaped object with a mean radius of 11 km. Phobos does not have an
+            atmosphere due to its low mass and low gravity. -Phobos orbits 6,000
+            km (3,700 mi) from the Martian surface, closer to its primary body
+            than any other known planetary moon Phobos is one of the least
+            reflective bodies in the Solar System, with an albedo of 0.071. The
+            porosity of Phobos was calculated to be 30% ± 5%, or a quarter to a
+            third being empty. Deimos- the smaller and outermost of the two
+            natural satellites of Mars. Deimos is 23,460 km (14,580 mi) from
+            Mars, much farther than Mars' other moon, Phobos.
+          </p>
+        </div>
+        <div id="necessities" class="gensub">
+          <h2>Living conditions</h2>
+          Mars is also called the "Red planet" due to its reddish hue caused by
+          oxidized iron (a.k.a rust) on the planet's surface. Mars is tilted by
+          about 25 degrees, which means that the red planet has four seasons,
+          too (each twice as long as Earth's) Traces of ancient riverbeds and
+          lakes on the planet imply that a vast quantity of liquid water may
+          once have existed in the presence of a denser atmosphere. Most of our
+          knowledge about this Planet came from the Opportunity rover which
+          landed on Mars in 2004 and explored it for 14 years, helping
+          scientists better understand the planet's geology and climate.
+          Depending on the distance between Earth and Mars, commands sent to the
+          red planet take almost 20 minutes to arrive, and another 20 minutes
+          for a response to travel back to Earth.
+        </div>
+      </div>
+    </div>
+    <div id="availability">
+      <p>Check space travel availability (yyyy.mm):</p>
+      <label id="selform" for="sel">Year of travel:</label>
+      <input type="number" id="sel" name="sel" min="1900" step="1" max="3900" value="2023">
+      <button id="checkbutton" onclick="check()">Check</button>
+      <div id="inject"></div>
+    </div>
+    <div id="imdone"><h2 id="itineraries">Itineraries</h2></div>
+    <div id="trips">
+      <div id="t1" class="trip"><p>Are you fascinated with natural landscape? Then you will surely enjoy our sightseeing trip that will show you around the enormous mountain ranges and canyons, including the largest mountain in the Solar System called Olympus Mons, whose peak measures around 22km above surface level and the massive canyon Valles Marineris, plunging about 8km deep and spanning over 3000km in length. It is also often called the “Grand Canyon of Mars”.
+        </p></div>
+      <div id="t2" class="trip"><p>Would you like to visit Mars's natural satellites? We have an itinerary suited for you! The spacecraft initially lands on Phobos, the innermost and larger of the two moons. It doesn't have an atmosphere due to its low mass and low gravity. It orbits closer to its primary body than any other known planetary moon. The second satellite we will visit is Deimos, which orbits much further from Mars than Phobos. </p></div>
+      <div id="t3" class="trip"><p>Are you interested in the ins and outs of the largest settlement outside of Earth? You can talk to engineers operating the solar power plants or people responsible for the generation of oxygen by converting the carbon dioxide from Mars's atmosphere. You can also observe the entire colony with a telescope from the highest man-made observation point for a small fee.</p></div>
+    </div>
+</body>
+</html>

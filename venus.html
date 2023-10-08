@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus</title>
+    <link rel="stylesheet" href="venusstyle.css" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <script>
+      function check() {
+        let sel = parseInt(document.getElementById("sel").value);
+        let x = 2024.75;
+        let year= 2024;
+        let avail = false;
+        let decpart = 0.83;
+        let mon = 10;
+        while(x<sel+1) {
+          if(Math.floor(x)==sel) {
+            avail = true;
+            year= Math.floor(x);
+            decpart = x%1;
+            mon = Math.floor(decpart*12);
+            mon=mon+1;
+            document.getElementById("inject").innerHTML = "<p>" + year + "." + mon + "</p>";
+            break;
+          }
+          x=x+2.13415756;
+        }
+        if(avail==false) {
+          document.getElementById("inject").innerHTML = "<p>No available launch dates</p>";
+        }
+      }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <div class="dropdown">
+          <button class="dropbtn">Destinations
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="mercury.html">Mercury</a>
+            <a href="venus.html">Venus</a>
+            <a href="moon.html">Moon</a>
+            <a href="mars.html">Mars</a>
+            <a href="jupiter.html">Jupiter</a>
+            <a href="saturn.html">Saturn</a>
+            <a href="uranus.html">Uranus</a>
+            <a href="neptune.html">Neptune</a>
+          </div>
+        </div>
+    </div>
+    <div id="header"><p id="headtext">Venus</p></div>
+    <div id="main">
+      <div id="imdone"><h2 id="itineraries">Before you choose</h2></div>
+      <div id="general">
+        <div id="info" class="gensub">
+          <h2>Info</h2>
+          <p>
+            Venus is one of only two planets in the Solar System which rotate clockwise. This rotation is called retrograde rotation. One full rotation on its axis is equal to 243 days on Earth. That is actually slower than the time it takes for Venus to complete one orbit around the Sun, which takes 225 Earth days. On Venus, as on Mercury, a year is actually shorter than a day! The first exploration of Venus was done by the Soviet probe Venera 1. Launched in 1961, the spacecraft was supposed to fly by Venus to take a closer look at the planet. Unfortunately, the probe malfunctioned before it made its closest approach. The time it takes to reach Venus with our rockets is around 3 days.
+          </p>
+        </div>
+        <div id="touristspots" class="gensub">
+          <h2>Tourist spots</h2>
+          <p>
+            In addition to the craters, mountains and valleys commonly found on other terrestrial planets, Venus has a number of unique surface features. These include:
+        <ul>
+            <li>flat-topped volcanic domes called farra. That are between 20 and 50 km in diameter and 100 to 1,000m in height, their shapes resemble pancakes</li>
+            <li>star-shaped systems of cracks spreading from a single point called novae</li>
+            <li>structures composed of radial and concentric cracks resembling spider webs, known as arachnoids, and crowns, circular rings of cracks sometimes surrounded by depressions.</li>
+        </ul>
+            All these formations are of volcanic origin. The existence of almost flat volcanoes indicates that they were formed from low-viscosity lava, such as basaltic lava.
+          </p>
+        </div>
+        <div id="necessities" class="gensub">
+          <h2>Living conditions</h2>
+          Venus' thick atmosphere, which is over 90 times thicker than Earth's, is the main cause for its high temperature. This outer layer is composed almost entirely of carbon dioxide, a well-known gas responsible for a very strong greenhouse effect. Trapped by Venus's atmosphere, the Sun's energy heats the planet to constant temperatures over 450 degrees Celsius. About 80% of Venus' surface constitute volcanic plains, 70% are plains covered with low ridges, and 10% are smooth or wavy. Two highlands fill in the remaining 20%. One, called Ishtar Terra, lies in the northern hemisphere and is more or less the size of Australia. There is also a second bigger one to the south of the equator called Aphrodite Terra. It is similar in size to South America. A network of cracks and faults covers most of this area and you can also find Venus' highest mountain called Maxwell Montes in there. Its top peak can be found 11km above the average surface level of Venus.
+
+        </div>
+      </div>
+    </div>
+    <div id="availability">
+      <p>Check space travel availability (yyyy.mm):</p>
+      <label id="selform" for="sel">Year of travel:</label>
+      <input type="number" id="sel" name="sel" min="1900" step="1" max="3900" value="2023">
+      <button id="checkbutton" onclick="check()">Check</button>
+      <div id="inject"></div>
+    </div>
+    <div id="imdone"><h2 id="itineraries">Itineraries</h2></div>
+    <div id="trips">
+      <div id="t1" class="trip"><p>Our itinerary includes a sightseeing trip of Venus's unique surface features like:
+        novae's (star-shaped systems of cracks spreading from a single point), arachnoids (structures composed of radial and concentric cracks resembling spider webs) and crowns (circular rings of cracks sometimes surrounded by depressions). Other activities are also going to be available at the colony located in the planet's athmosphere.
+        </p></div>
+      <div id="t2" class="trip"><p>We wish to show you all there is to see on Venus. From diffrent types of cracks that are unique to  "Earth's twin sister"  like arachnoids to the farra's (flat-topped volcanic domes). We will also give you a tour of our flying colony and tell yoo all about it's ins and outs. </p></div>
+      <div id="t3" class="trip"><p>Do you want to see Venus without having to experience it's harsh conditions?  We have just the thing for you! When we arrive at the colony we  will take a few hour break. Afterwards we wil return to the spacecraft to get a bird's eye view of the planet's volcanic formation's. When we are done we set our course straight back to Earth.</p></div>
+    </div>
+</body>
+</html>
